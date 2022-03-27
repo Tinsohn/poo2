@@ -46,7 +46,7 @@ public class MatrizCuadradaNumeros {
 
         if (tamanioIMatrizIngresada != tamanioJMatrizIngresada)
             throw new Exception("No es una matriz cuadrada.");
-        if (this.tamanioI == tamanioIMatrizIngresada)
+        if (this.tamanioI != tamanioIMatrizIngresada && this.tamanioJ != tamanioJMatrizIngresada)
             throw new Exception("No son matrices de mismo tamaño.");
 
         int[][] matrizSuma = new int[tamanioI][tamanioJ];
