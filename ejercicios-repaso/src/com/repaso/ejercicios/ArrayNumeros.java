@@ -1,4 +1,4 @@
-package main.java.com.repaso.ejercicios;
+package com.repaso.ejercicios;
 
 import java.util.Arrays;
 
@@ -47,12 +47,12 @@ public class ArrayNumeros {
     }
 
     public boolean estaOrdenado3() {
-    	int[] arrCopia = this.numeros.clone();
-    	Arrays.sort(arrCopia);
-    	if(Arrays.equals(arrCopia, numeros)) {
-    		return true;
-    	}
-    	return false;
+        int[] arrCopia = this.numeros.clone();
+        Arrays.sort(arrCopia);
+        if (Arrays.equals(arrCopia, numeros)) {
+            return true;
+        }
+        return false;
     }
 
     /*
@@ -113,11 +113,11 @@ public class ArrayNumeros {
 
         while (!ordenado) {
             ordenado = true;
-            for (int i = 0; i < arr.length-1; i++) {
-                if (arr[i] > arr[i+1]) {
+            for (int i = 0; i < arr.length - 1; i++) {
+                if (arr[i] > arr[i + 1]) {
                     aux = arr[i];
-                    arr[i] = arr[i+1];
-                    arr[i+1] = aux;
+                    arr[i] = arr[i + 1];
+                    arr[i + 1] = aux;
                     ordenado = false;
                 }
             }

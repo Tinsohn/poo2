@@ -1,4 +1,4 @@
-package main.java.com.repaso.ejercicios;
+package com.repaso.ejercicios;
 
 public class MatrizCuadradaNumeros {
 

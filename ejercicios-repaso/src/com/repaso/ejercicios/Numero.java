@@ -1,4 +1,4 @@
-package main.java.com.repaso.ejercicios;
+package com.repaso.ejercicios;
 
 public class Numero {
 
@@ -21,15 +21,15 @@ public class Numero {
         if (valor < 0)
             throw new Exception("El número no puede ser menor a cero (0)");
 
-        if(this.valor == 0 || this.valor == 1)
+        if (this.valor == 0 || this.valor == 1)
             return false;
 
-        for(int i = 2; i <= this.valor; i++) {
-            if(this.valor%i == 0)
+        for (int i = 2; i <= this.valor; i++) {
+            if (this.valor % i == 0)
                 cantDivisores++;
         }
 
-        if(cantDivisores > 1)
+        if (cantDivisores > 1)
             return false;
 
         return true;
