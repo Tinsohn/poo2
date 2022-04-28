@@ -41,7 +41,6 @@ public class SumoService {
             File file = new File("sumo.out");
             BufferedWriter bw = new BufferedWriter(new FileWriter(file));
             for (int i = 0; i < dominancias.length; i++) {
-                System.out.println(dominancias[i]);
                 bw.write(dominancias[i] + "\n");
             }
             bw.close();
