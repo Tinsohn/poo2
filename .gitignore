@@ -33,4 +33,5 @@ HELP.md
 ### VS Code ###
 */.vscode/
 
+*/*.in
 */*.out
