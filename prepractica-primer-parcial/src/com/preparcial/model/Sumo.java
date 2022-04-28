@@ -34,13 +34,34 @@ public class Sumo {
                 && this.altura > contrincante.getAltura()) {
             return true;
         } else if ((this.peso == contrincante.getPeso()
-                && this.altura > contrincante.getAltura())
-                || (this.peso > contrincante.getPeso()
-                && this.altura == contrincante.getAltura())) {
+                        && this.altura > contrincante.getAltura())
+                    || (this.peso > contrincante.getPeso()
+                            && this.altura == contrincante.getAltura())) {
             return true;
         }
 
         return false;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Sumo sumo = (Sumo) o;
+
+        if (Double.compare(sumo.peso, peso) != 0) return false;
+        return Double.compare(sumo.altura, altura) == 0;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        temp = Double.doubleToLongBits(peso);
+        result = (int) (temp ^ (temp >>> 32));
+        temp = Double.doubleToLongBits(altura);
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        return result;
+    }
 }
