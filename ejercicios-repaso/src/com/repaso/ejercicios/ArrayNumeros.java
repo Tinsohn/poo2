@@ -49,10 +49,8 @@ public class ArrayNumeros {
     public boolean estaOrdenado3() {
         int[] arrCopia = this.numeros.clone();
         Arrays.sort(arrCopia);
-        if (Arrays.equals(arrCopia, numeros)) {
-            return true;
-        }
-        return false;
+
+        return Arrays.equals(arrCopia, numeros);
     }
 
     /*
